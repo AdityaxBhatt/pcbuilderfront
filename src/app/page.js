@@ -4,6 +4,7 @@ export default function Home() {
 
     <center >
     <h1>PCFIT.In</h1>
+    <p>coming soon</p>
     </center>
   );
 }
