@@ -25,16 +25,4 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{
-  font-size: xx-large;
-  font-weight: bolder;
-  height: 320px;
-  width: 645px;
-  text-align: center;
-  line-height: 600px;
-}
-p{
-  height: 380px;
-  width: 645px;
-  text-align: center;
-}
+
