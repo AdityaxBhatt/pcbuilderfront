@@ -26,10 +26,15 @@ body {
 }
 
 h1{
-  font-size: xxx-large;
+  font-size: xx-large;
   font-weight: bolder;
+  height: 320px;
+  width: 645px;
+  text-align: center;
+  line-height: 600px;
+}
+p{
   height: 380px;
   width: 645px;
   text-align: center;
-  line-height: 700px;
 }
