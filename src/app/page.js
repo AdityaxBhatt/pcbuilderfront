@@ -16,7 +16,7 @@ export default function PcSelection() {
   const fetchCompatibleComponents = async (category, setOptions) => {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/components/${category}`,
+        `${process.env.B_API}/api/components/${category}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
