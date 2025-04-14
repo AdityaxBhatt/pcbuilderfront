@@ -6,11 +6,13 @@ export default function PcSelection() {
   const [cpuOptions, setCpuOptions] = useState([]);
   const [motherboardOptions, setMotherboardOptions] = useState([]);
   const [ramOptions, setRamOptions] = useState([]);
+  const [gpuOptions, setGpuOptions] = useState([]);
 
   useEffect(() => {
     fetchCompatibleComponents("cpu", setCpuOptions);
     fetchCompatibleComponents("motherboard", setMotherboardOptions);
     fetchCompatibleComponents("ram", setRamOptions);
+    fetchCompatibleComponents("gpu", setGpuOptions);
   }, [selectedComponents]);
 
   const fetchCompatibleComponents = async (category, setOptions) => {
@@ -94,6 +96,22 @@ export default function PcSelection() {
           {ramOptions.map((ram) => (
             <option key={ram.id} value={ram.id}>
               {ram.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* GPU Dropdown */}
+      <div className="mb-4">
+        <label className="block font-semibold">GPU:</label>
+        <select
+          onChange={(e) => handleComponentChange(e, "GPU", ramOptions)}
+          className="border p-2 w-full"
+        >
+          <option value="">Select GPU</option>
+          {ramOptions.map((gpu) => (
+            <option key={gpu.id} value={gpu.id}>
+              {gpu.name}
             </option>
           ))}
         </select>
