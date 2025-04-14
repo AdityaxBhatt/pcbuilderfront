@@ -21,10 +21,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col h-screen">
         <nav className="bg-blue-600 text-white p-4">
-          <div className="container mx-auto text-lg font-bold text-left">PC Builder</div>
+          <div className="container mx-auto text-lg font-bold text-left" style={{fill:1}}>PC Builder</div>
         </nav>
         <main>{children}</main>
-        <footer className="bg-gray-800 text-white p-4 text-center sticky top-[100vh]">
+        <footer className="bg-gray-800 text-white p-4 text-center sticky top-[100vh]" style={{fill:1}}>
           &copy; {new Date().getFullYear()} PC Builder. All rights reserved.
         </footer>
       </body>
