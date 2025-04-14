@@ -54,7 +54,8 @@ export default function PcSelection() {
   };
 
   return (
-    <div className="p-4" style={{marginLeft:20}}>
+    <div style={{flex:1}}>
+    <div className="p-4" style={{marginLeft:20,float:'left',display:'inline'}}>
       <h1 className="text-xl font-bold mb-4">Select Your PC Components</h1>
 
       {/* CPU Dropdown */}
@@ -172,5 +173,9 @@ export default function PcSelection() {
       </div>
 
     </div>
+    <img src="/side.png" style={{display:'inline', padding:'40'}} width={800} height={800} ></img>
+
+    </div>
+    
   );
 }
