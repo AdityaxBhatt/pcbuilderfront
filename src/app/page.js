@@ -7,12 +7,18 @@ export default function PcSelection() {
   const [motherboardOptions, setMotherboardOptions] = useState([]);
   const [ramOptions, setRamOptions] = useState([]);
   const [gpuOptions, setGpuOptions] = useState([]);
+  const [storageOptions, setStorageOptions] = useState([]);
+  const [psuOptions, setPsuOptions] = useState([]);
+  const [coolingOptions, setCoolingOptions] = useState([]);
 
   useEffect(() => {
     fetchCompatibleComponents("cpu", setCpuOptions);
     fetchCompatibleComponents("motherboard", setMotherboardOptions);
     fetchCompatibleComponents("ram", setRamOptions);
     fetchCompatibleComponents("gpu", setGpuOptions);
+    fetchCompatibleComponents("storage", setStorageOptions);
+    fetchCompatibleComponents("psu", setPsuOptions);
+    fetchCompatibleComponents("cooling", setCoolingOptions);
   }, [selectedComponents]);
 
   const fetchCompatibleComponents = async (category, setOptions) => {
@@ -48,13 +54,13 @@ export default function PcSelection() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4" style={{marginLeft:20}}>
       <h1 className="text-xl font-bold mb-4">Select Your PC Components</h1>
 
       {/* CPU Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">CPU:</label>
-        <select
+        <select style={{width:400}}
           onChange={(e) => handleComponentChange(e, "CPU", cpuOptions)}
           className="border p-2 w-full"
         >
@@ -70,7 +76,7 @@ export default function PcSelection() {
       {/* Motherboard Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">Motherboard:</label>
-        <select
+        <select style={{width:400}}
           onChange={(e) =>
             handleComponentChange(e, "Motherboard", motherboardOptions)
           }
@@ -88,7 +94,7 @@ export default function PcSelection() {
       {/* RAM Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">RAM:</label>
-        <select
+        <select style={{width:400}}
           onChange={(e) => handleComponentChange(e, "RAM", ramOptions)}
           className="border p-2 w-full"
         >
@@ -104,7 +110,7 @@ export default function PcSelection() {
       {/* GPU Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">GPU:</label>
-        <select
+        <select style={{width:400}}
           onChange={(e) => handleComponentChange(e, "GPU", gpuOptions)}
           className="border p-2 w-full"
         >
@@ -116,6 +122,55 @@ export default function PcSelection() {
           ))}
         </select>
       </div>
+
+      {/* Storage Dropdown */}
+      <div className="mb-4">
+        <label className="block font-semibold">Stoage:</label>
+        <select style={{width:400}}
+          onChange={(e) => handleComponentChange(e, "Storage", storageOptions)}
+          className="border p-2 w-full"
+        >
+          <option value="">Select Stoage</option>
+          {storageOptions.map((storage) => (
+            <option key={storage.id} value={storage.id}>
+              {storage.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* PSU Dropdown */}
+      <div className="mb-4">
+        <label className="block font-semibold">PSU:</label>
+        <select style={{width:400}}
+          onChange={(e) => handleComponentChange(e, "PSU", psuOptions)}
+          className="border p-2 w-full"
+        >
+          <option value="">Select PSU</option>
+          {psuOptions.map((psu) => (
+            <option key={psu.id} value={psu.id}>
+              {psu.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Cooling Dropdown */}
+      <div className="mb-4">
+        <label className="block font-semibold">Cooling:</label>
+        <select style={{width:400}}
+          onChange={(e) => handleComponentChange(e, "Cooling", coolingOptions)}
+          className="border p-2 w-full"
+        >
+          <option value="">Select Cooling</option>
+          {coolingOptions.map((cooling) => (
+            <option key={cooling.id} value={cooling.id}>
+              {cooling.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
     </div>
   );
 }
