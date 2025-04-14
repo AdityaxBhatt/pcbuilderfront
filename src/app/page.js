@@ -109,7 +109,7 @@ export default function PcSelection() {
           className="border p-2 w-full"
         >
           <option value="">Select GPU</option>
-          {ramOptions.map((gpu) => (
+          {gpuOptions.map((gpu) => (
             <option key={gpu.id} value={gpu.id}>
               {gpu.name}
             </option>
