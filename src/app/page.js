@@ -105,7 +105,7 @@ export default function PcSelection() {
       <div className="mb-4">
         <label className="block font-semibold">GPU:</label>
         <select
-          onChange={(e) => handleComponentChange(e, "GPU", ramOptions)}
+          onChange={(e) => handleComponentChange(e, "GPU", gpuOptions)}
           className="border p-2 w-full"
         >
           <option value="">Select GPU</option>
