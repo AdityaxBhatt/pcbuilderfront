@@ -60,7 +60,7 @@ export default function PcSelection() {
       {/* CPU Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">CPU:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'purple'}}
           onChange={(e) => handleComponentChange(e, "CPU", cpuOptions)}
           className="border p-2 w-full"
         >
@@ -76,7 +76,7 @@ export default function PcSelection() {
       {/* Motherboard Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">Motherboard:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'purple'}}
           onChange={(e) =>
             handleComponentChange(e, "Motherboard", motherboardOptions)
           }
@@ -94,7 +94,7 @@ export default function PcSelection() {
       {/* RAM Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">RAM:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'purple'}}
           onChange={(e) => handleComponentChange(e, "RAM", ramOptions)}
           className="border p-2 w-full"
         >
@@ -110,7 +110,7 @@ export default function PcSelection() {
       {/* GPU Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">GPU:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'yellow'}}
           onChange={(e) => handleComponentChange(e, "GPU", gpuOptions)}
           className="border p-2 w-full"
         >
@@ -126,7 +126,7 @@ export default function PcSelection() {
       {/* Storage Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">Stoage:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'yellow'}}
           onChange={(e) => handleComponentChange(e, "Storage", storageOptions)}
           className="border p-2 w-full"
         >
@@ -142,7 +142,7 @@ export default function PcSelection() {
       {/* PSU Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">PSU:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'yellow'}}
           onChange={(e) => handleComponentChange(e, "PSU", psuOptions)}
           className="border p-2 w-full"
         >
@@ -158,7 +158,7 @@ export default function PcSelection() {
       {/* Cooling Dropdown */}
       <div className="mb-4">
         <label className="block font-semibold">Cooling:</label>
-        <select style={{width:400}}
+        <select style={{width:400,color:'yellow'}}
           onChange={(e) => handleComponentChange(e, "Cooling", coolingOptions)}
           className="border p-2 w-full"
         >
