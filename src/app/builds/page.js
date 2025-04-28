@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function PcBuilds() {
   const intelCards = [
-    { id: 1, img: "/Intel Builds.png", isTitle: true },
+    { id: 1, img: "/intelBuilds.png", isTitle: true },
     { id: 2, title: "i5 Build", img: "/i5build.png" },
     { id: 3, title: "i9 Beast 2", img: "/i9Build.jpg" },
     { id: 4, title: "Gaming master", img: "/pcMaster.png" },
