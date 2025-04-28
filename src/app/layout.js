@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from 'next/image'
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +24,15 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col h-screen">
         <nav className="bg-black-600 text-white p-4" style={{flex:1}}>
           <div className="container mx-auto text-lg font-bold " style={{flex:1, justifyContent:"space-between"}}>
+            <Link href="/">
             <img src="/logo.png" width={280} height={40} alt="logo image" style={{display:"inline",flex:1}}/>
+            </Link>
+            <Link href="/builds">
             <div style={{display:"inline",flex:1, marginLeft:50}}>Builds</div>
+            </Link>
+            <Link href="/community">
             <div style={{display:"inline",flex:1, marginLeft:50}}>Community</div>
+            </Link>
             <div style={{display:"inline",flex:1, marginLeft:50}}>Leaderboard</div>
             <div style={{display:"inline",flex:1, marginLeft:50}}>Contact</div>
             <div style={{display:"inline",flex:1, marginLeft:310 ,border: "1px solid ",padding:5,backgroundColor:"yellow",color:"black"}}>Sign up</div>

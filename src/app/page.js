@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
+
 export default function PcSelection() {
   const [selectedComponents, setSelectedComponents] = useState([]);
   const [cpuOptions, setCpuOptions] = useState([]);
@@ -173,7 +174,7 @@ export default function PcSelection() {
       </div>
 
     </div>
-    <img src="/side.png" style={{display:'inline', padding:'40'}} width={800} height={800} ></img>
+    {/* <img src="/side.png" style={{display:'inline', padding:'40'}} width={800} height={800} ></img> */}
 
     </div>
     
